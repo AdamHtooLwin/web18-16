@@ -248,3 +248,28 @@ Processing by StaticController#index as HTML
 Completed 200 OK in 173ms (Views: 171.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/basics" for 127.0.0.1 at 2018-08-31 19:21:51 +0700
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics/divide_by_zero" for 127.0.0.1 at 2018-08-31 19:21:53 +0700
+Processing by ExceptionController#divide_by_zero as HTML
+IT'S A TRAP!
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ZeroDivisionError (divided by 0):
+  
+app/controllers/exception_controller.rb:5:in `/'
+app/controllers/exception_controller.rb:5:in `divide_by_zero'
+Started GET "/basics" for 127.0.0.1 at 2018-08-31 19:21:56 +0700
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+

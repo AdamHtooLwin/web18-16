@@ -10,6 +10,21 @@
   </head>
 
   <body>
+  <style>
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: black;
+      color: white;
+      text-align: center;
+    }
+  </style>
     <%= yield %>
+  <div class="footer">
+    <p>Validate</p>
+  </div>
   </body>
+
 </html>

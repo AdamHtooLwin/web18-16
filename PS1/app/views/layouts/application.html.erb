@@ -21,10 +21,12 @@
       text-align: center;
     }
   </style>
-    <%= yield %>
+
   <div class="footer">
+    <% link_to "Home", basics_path %>
     <p>Validate</p>
   </div>
+  <%= yield %>
   </body>
 
 </html>

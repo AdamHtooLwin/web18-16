@@ -465,3 +465,166 @@ Processing by StaticController#index as HTML
 Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/basics" for 127.0.0.1 at 2018-08-31 20:06:47 +0700
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 192ms (Views: 187.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics/divide_by_zero" for 127.0.0.1 at 2018-08-31 20:06:59 +0700
+Processing by ExceptionController#divide_by_zero as HTML
+IT'S A TRAP!
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ZeroDivisionError (divided by 0):
+  
+app/controllers/exception_controller.rb:5:in `/'
+app/controllers/exception_controller.rb:5:in `divide_by_zero'
+Started GET "/basics" for 127.0.0.1 at 2018-08-31 20:07:01 +0700
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics" for 127.0.0.1 at 2018-08-31 20:21:29 +0700
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 111ms (Views: 104.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics/divide_by_zero" for 127.0.0.1 at 2018-08-31 20:21:31 +0700
+Processing by ExceptionController#divide_by_zero as HTML
+IT'S A TRAP!
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ZeroDivisionError (divided by 0):
+  
+app/controllers/exception_controller.rb:5:in `/'
+app/controllers/exception_controller.rb:5:in `divide_by_zero'
+Started GET "/basics" for 127.0.0.1 at 2018-08-31 20:21:35 +0700
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics" for 127.0.0.1 at 2018-08-31 20:22:05 +0700
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics/news" for 127.0.0.1 at 2018-08-31 20:22:07 +0700
+Processing by NewsController#index as HTML
+  Rendering news/index.html.erb within layouts/application
+  Rendered news/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6247ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics/news" for 127.0.0.1 at 2018-08-31 20:23:05 +0700
+Processing by NewsController#index as HTML
+  Rendering news/index.html.erb within layouts/application
+  Rendered news/index.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 4795ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics/news" for 127.0.0.1 at 2018-08-31 20:24:27 +0700
+Processing by NewsController#index as HTML
+  Rendering news/index.html.erb within layouts/application
+  Rendered news/index.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 4466ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics/news" for 127.0.0.1 at 2018-08-31 20:26:05 +0700
+Processing by NewsController#index as HTML
+  Rendering news/index.html.erb within layouts/application
+  Rendered news/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4270ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics/news" for 127.0.0.1 at 2018-08-31 20:33:08 +0700
+Processing by NewsController#index as HTML
+  Rendering news/index.html.erb within layouts/application
+  Rendered news/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5652ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics/news" for 127.0.0.1 at 2018-08-31 20:37:22 +0700
+Processing by NewsController#index as HTML
+  Rendering news/index.html.erb within layouts/application
+  Rendered news/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3451ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics/news" for 127.0.0.1 at 2018-08-31 20:38:34 +0700
+Processing by NewsController#index as HTML
+  Rendering news/index.html.erb within layouts/application
+  Rendered news/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4407ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics" for 127.0.0.1 at 2018-08-31 20:38:50 +0700
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 110ms (Views: 105.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics/news" for 127.0.0.1 at 2018-08-31 20:38:56 +0700
+Processing by NewsController#index as HTML
+  Rendering news/index.html.erb within layouts/application
+  Rendered news/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4354ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics/divide_by_zero" for 127.0.0.1 at 2018-08-31 20:39:05 +0700
+Processing by ExceptionController#divide_by_zero as HTML
+IT'S A TRAP!
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ZeroDivisionError (divided by 0):
+  
+app/controllers/exception_controller.rb:5:in `/'
+app/controllers/exception_controller.rb:5:in `divide_by_zero'
+Started GET "/basics" for 127.0.0.1 at 2018-08-31 20:39:07 +0700
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics/divide_by_zero" for 127.0.0.1 at 2018-08-31 20:39:12 +0700
+Processing by ExceptionController#divide_by_zero as HTML
+IT'S A TRAP!
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ZeroDivisionError (divided by 0):
+  
+app/controllers/exception_controller.rb:5:in `/'
+app/controllers/exception_controller.rb:5:in `divide_by_zero'
+Started GET "/basics" for 127.0.0.1 at 2018-08-31 20:39:19 +0700
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/basics/news" for 127.0.0.1 at 2018-08-31 20:42:23 +0700
+Processing by NewsController#index as HTML
+  Rendering news/index.html.erb within layouts/application
+  Rendered news/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3455ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+

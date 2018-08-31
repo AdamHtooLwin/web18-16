@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get "/basics" => "static#index"
 
   get "/basics/divide_by_zero" => "exception#divide_by_zero"
+  get "/basics/news" => "news#index"
 end

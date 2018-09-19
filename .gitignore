@@ -11,6 +11,8 @@
 /basics/.bundle
 
 # Ignore all logfiles and tempfiles.
+basics/log/*
+basics/tmp/*
 /basics/log/*
 /basics/tmp/*
 !/log/.keep
@@ -20,6 +22,7 @@
 # Ignore uploaded files in development
 /storage/*
 /basics/storage/*
+basics/storage/*
 !/storage/.keep
 
 /node_modules

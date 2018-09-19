@@ -15,6 +15,10 @@ basics/log/*
 basics/tmp/*
 /basics/log/*
 /basics/tmp/*
+PS1/log/*
+PS1/tmp/*
+/PS1/log/*
+/PS1/tmp/*
 !/log/.keep
 !/tmp/.keep
 /basics/log/development.log

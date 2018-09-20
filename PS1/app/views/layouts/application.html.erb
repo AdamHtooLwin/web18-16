@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PS1</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+<style>
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+</style>
+
+<div class="footer" style="background-color :cyan;">
+
+  <!--    <p>Validate this site</p>-->
+  <a href="https://validator.w3.org" style="color: black;">Validate this Site</a>
+  <%= link_to "Home", basics_path %>
+</div>
+<%= yield %>
+</body>
+</html>

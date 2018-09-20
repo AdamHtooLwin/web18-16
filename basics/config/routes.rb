@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   get "/ps3" => "ps3#index"
   get "/ps3/project_plan" => "project_plan#index"
+  get "/ps3/project_plan/user1" => "user#index"
+  get "/ps3/project_plan/user2" => "user#index"
 end

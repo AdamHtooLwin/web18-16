@@ -6,6 +6,7 @@
 
 # Ignore Rubymine files
 /basics/.idea/
+/PS1/.idea/
 
 # Ignore bundler config.
 /basics/.bundle

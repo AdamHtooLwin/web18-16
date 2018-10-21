@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get "/ps4" => "ps4#index"
+  get 'ps4/index'
+  get 'ps4/documentation'
   get 'ps1/divide_by_zero_exception'
   get 'ps1/news'
   get "/ps1" => "ps1#index"

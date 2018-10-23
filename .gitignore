@@ -5,6 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore Rubymine files
+/.idea/*
 /basics/.idea/
 /PS1/.idea/
 

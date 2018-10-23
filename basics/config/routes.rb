@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get "/ps4" => "ps4#index"
   get 'ps4/index'
   get 'ps4/documentation'

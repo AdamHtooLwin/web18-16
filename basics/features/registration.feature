@@ -9,4 +9,5 @@ Feature: User Registration
     When I visit the registration page
     Then I should see a form to register
     When I submit the form
-    Then I should be redirected to the root page
+    Then I should be redirected to the root page after registration
+    And I should see I am signed in after registration

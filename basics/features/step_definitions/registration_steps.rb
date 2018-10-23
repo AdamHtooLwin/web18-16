@@ -1,20 +1,18 @@
-Given("I am an unregistered user") do
-  pending # Write code here that turns the phrase above into concrete actions
-
-end
-
 When("I visit the registration page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit '/users/sign_up'
 end
 
 Then("I should see a form to register") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_selector('form#new_user')
 end
 
 When("I submit the form") do
-  pending # Write code here that turns the phrase above into concrete actions
+  fill_in('Email', with: "a@c.com")
+  fill_in('Password', with: "secret")
+  fill_in('Password confirmation', with: "secret")
+  click_on('Sign up')
 end
 
-Then("I should be redirected to the login page") do
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I should be redirected to the root page") do
+  expect(page).to have_content('Problem Sets Basics')
 end

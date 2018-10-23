@@ -23,9 +23,12 @@
 </style>
 
 <div class="footer" >
-
+  <% if user_signed_in? %>
+    Signed in as <%= current_user.email %> |
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+  <% end %>
   <!--    <p>Validate this site</p>-->
-  <a href="https://validator.w3.org" style="color: black;">Validate this Site</a>
+  | <a href="https://validator.w3.org" style="color: black;">Validate this Site</a> |
   <%= link_to "Home", root_path %>
 </div>
 <%= yield %>

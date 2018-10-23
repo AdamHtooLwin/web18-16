@@ -28,6 +28,15 @@
 
 <hr>
 
-<div class="container">
-  <a href="users/sign_in" class="btn btn-primary" role="button">User Login</a>
-</div>
+<% if user_signed_in? %>
+  <div class="container">
+    You are already signed in as <%= current_user.email %>! |
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+  </div>
+<% else %>
+  <div class="container">
+    <a href="users/sign_in" class="btn btn-primary" role="button">User Login</a>
+  </div>
+<% end %>
+
+

@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   get "/ps5" => 'ps5#index'
   get 'ps5/documentation'
   get 'ps5/drone_registration'
+  get 'ps5/drone_list'
+  post 'ps5/drone_create'
+
   devise_for :users
   get "/ps4" => "ps4#index"
   get 'ps4/index'

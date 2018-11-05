@@ -6,14 +6,19 @@ Then("I should see a form to register the drone") do
   expect(page).to have_selector('form#registration_form')
 end
 
+Given("I have a drone") do
+  @drone = FactoryBot.create :drone
+end
+
 When("I submit the drone form") do
-  pending # Write code here that turns the phrase above into concrete actions
+  fill_in('Name', with: "Orion")
+  click_on('Register')
 end
 
 Then("I should be redirected to the drone list page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content('Drones')
 end
 
 Then("I should see the registered drone") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content('Orion')
 end

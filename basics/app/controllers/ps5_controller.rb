@@ -1,4 +1,5 @@
 class Ps5Controller < ApplicationController
+  before_action :authenticate_user!, only: [:drone_registration, :drone_list, :drone_create]
   def index
   end
 
@@ -10,7 +11,6 @@ class Ps5Controller < ApplicationController
 
   def flow_control
   end
-
 
   def drone_list
     user = current_user

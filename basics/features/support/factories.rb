@@ -4,4 +4,9 @@ FactoryBot.define do
     password "secret"
     password_confirmation "secret"
   end
+  
+  factory :drone, class: Drone do
+    name "Orion"
+    status "Offline"
+  end
 end

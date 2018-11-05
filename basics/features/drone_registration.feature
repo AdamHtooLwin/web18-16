@@ -6,6 +6,7 @@ Feature: Drone Registration
     Given I am a registered user
     When I visit the drone registration page
     Then I should see a form to register the drone
+    Given I have a drone
     When I submit the drone form
     Then I should be redirected to the drone list page
     And I should see the registered drone

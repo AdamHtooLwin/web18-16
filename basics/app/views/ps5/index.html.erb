@@ -14,7 +14,7 @@
 <body>
 
 <div class="jumbotron text-center">
-  <h1>Problem Sets Basics</h1>
+  <h1>Problem Set 5</h1>
 </div>
 
 
@@ -23,33 +23,15 @@
 
 <!--    <h1>Problem Set 1</h1>-->
 <div class="container">
-  <a href="ps1" class="btn btn-primary" role="button">PS1</a>
+  <a href="ps5/documentation" class="btn btn-primary" role="button">Documentation</a>
 </div>
 
 <hr>
 
-<div class="container">
-  <a href="ps2" class="btn btn-primary" role="button">PS2</a>
-</div>
-
-<hr>
-
-<div class="container">
-  <a href="ps3" class="btn btn-primary" role="button">PS3</a>
-</div>
-
-<hr>
-
-<div class="container">
-  <a href="ps4" class="btn btn-primary" role="button">PS4</a>
-</div>
-
-<hr>
-
-<div class="container">
-  <a href="ps5" class="btn btn-primary" role="button">PS5</a>
-</div>
+<% if user_signed_in? %>
+  <div class="container">
+    <%= link_to "Drone Registration", ps5_drone_registration_path%>
+  </div>
+<% end %>
 
 
-</body>
-</html>

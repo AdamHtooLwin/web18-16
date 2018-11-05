@@ -7,4 +7,10 @@ class Ps5Controller < ApplicationController
 
   def drone_registration
   end
+
+  def versions
+  end
+
+  def flow_control
+  end
 end

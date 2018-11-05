@@ -7,6 +7,12 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -22,15 +28,39 @@
   }
 </style>
 
-<div class="footer" >
-  <% if user_signed_in? %>
-    Signed in as <%= current_user.email %> |
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete %> |
-  <% end %>
-  <!--    <p>Validate this site</p>-->
-  <a href="https://validator.w3.org" style="color: black;">Validate this Site</a> |
-  <%= link_to "Home", root_path %>
-</div>
+<!--<div class="footer" >-->
+  <%# if user_signed_in? %>
+<!--    Signed in as <%#= current_user.email %> |-->
+<!--    <%#= link_to "Sign out", destroy_user_session_path, method: :delete %> |-->
+  <%# end %>
+<!--  <!--    <p>Validate this site</p>-->
+<!--  <a href="https://validator.w3.org" style="color: black;">Validate this Site</a> |-->
+  <%#= link_to "Home", root_path %>
+<!--</div>-->
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">DroneTracker</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><%= link_to "Home", root_path %></li>
+      <li> <a href="https://validator.w3.org">Validate this Site</a></li>
+<!--      <li><a href="#">Page 2</a></li>-->
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <% if user_signed_in? %>
+        <li><p class="navbar-text">Signed in as <%= current_user.email %></p></li>
+        <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <% end %>
+<!--      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+<!--      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+    </ul>
+  </div>
+</nav>
 <%= yield %>
 </body>
 </html>

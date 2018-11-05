@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get 'ps5/documentation/versions' => 'docu#versions'
   get 'ps5/documentation/flowcontrol' => 'docu#flowcontrol'
   get 'ps5/drone_registration'
+  get 'ps5/drone_list'
+  post 'ps5/drone_create'
+
   devise_for :users
   get "/ps4" => "ps4#index"
   get 'ps4/index'

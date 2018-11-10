@@ -1,5 +1,5 @@
 class Ps5Controller < ApplicationController
-  before_action :authenticate_user!, only: [:drone_registration, :drone_list, :drone_create, :users_list]
+  before_action :authenticate_user!, only: [:drone_registration, :drone_list, :drone_create, :users_list, :ban_user]
   def index
   end
 
@@ -20,9 +20,29 @@ class Ps5Controller < ApplicationController
     end
   end
 
+  def ban_user
+    @user = User.find(params[:id])
+    # @user.banned = true
+
+    respond_to do |format|
+      if @user.update(user_params)
+        format.html { redirect_to ps5_users_list_path, notice: 'User ban state has been updated.' }
+        format.json { render :show, status: :ok, location: @user }
+      else
+        format.html { render :edit }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def drone_list
     user = current_user
-    @drones = Drone.where(:user => user)
+    if user.admin
+      @drones = Drone.all
+    else
+      @drones = Drone.where(:user => user)
+    end
+
   end
 
   def drone_registration
@@ -44,6 +64,10 @@ class Ps5Controller < ApplicationController
   private
   def drone_params
     params.permit(:name)
+  end
+
+  def user_params
+    params.permit(:banned)
   end
 
 

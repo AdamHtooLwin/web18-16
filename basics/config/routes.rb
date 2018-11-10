@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'ps5/drone_list'
   get 'ps5/users_list'
   post 'ps5/drone_create'
+  put 'ps5/ban_user'
 
   # Devise routes
   devise_for :users

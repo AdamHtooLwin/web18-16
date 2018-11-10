@@ -1,5 +1,5 @@
 class Ps5Controller < ApplicationController
-  before_action :authenticate_user!, only: [:drone_registration, :drone_list, :drone_create]
+  before_action :authenticate_user!, only: [:drone_registration, :drone_list, :drone_create, :users_list]
   def index
   end
 
@@ -10,6 +10,14 @@ class Ps5Controller < ApplicationController
   end
 
   def flow_control
+  end
+
+  def users_list
+    if current_user.admin
+      @users = User.all
+    else
+      redirect_to ps5_drone_list_path, alert: "You need admin privileges."
+    end
   end
 
   def drone_list
@@ -29,7 +37,7 @@ class Ps5Controller < ApplicationController
     if @drone.save
       redirect_to ps5_drone_list_path, alert: "Drone created successfully."
     else
-      redirect_to new_user_path, alert: "Error creating user."
+      redirect_to drone_registration_path, alert: "Error registering drone."
     end
   end
 

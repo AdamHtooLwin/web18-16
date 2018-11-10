@@ -1,5 +1,7 @@
 class Ps5Controller < ApplicationController
   before_action :authenticate_user!, only: [:drone_registration, :drone_list, :drone_create, :users_list, :ban_user]
+  before_action :check_ban, only: [:drone_registration, :drone_list, :drone_create]
+
   def index
   end
 
@@ -62,6 +64,13 @@ class Ps5Controller < ApplicationController
   end
 
   private
+  def check_ban
+    if current_user.banned
+      flash[:error] = "Oh no! You've been banned. Please contact an admin for assistance."
+      redirect_to root_path
+    end
+  end
+
   def drone_params
     params.permit(:name)
   end

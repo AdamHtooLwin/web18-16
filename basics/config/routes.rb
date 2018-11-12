@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  # PS6 ROUTES
+  get "/ps6" => 'ps6#index'
+
   # PS5 Routes
   get "/ps5" => 'ps5#index'
   get 'ps5/documentation'

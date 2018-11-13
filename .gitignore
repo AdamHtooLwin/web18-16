@@ -7,6 +7,7 @@
 # Ignore Rubymine files
 /.idea/*
 /basics/.idea/
+/dronetracker/.idea/
 /PS1/.idea/
 
 # Ignore bundler config.
@@ -17,6 +18,10 @@ basics/log/*
 basics/tmp/*
 /basics/log/*
 /basics/tmp/*
+dronetracker/log/*
+dronetracker/tmp/*
+/dronetracker/log/*
+/dronetracker/tmp/*
 PS1/log/*
 PS1/tmp/*
 /PS1/log/*
@@ -24,6 +29,7 @@ PS1/tmp/*
 !/log/.keep
 !/tmp/.keep
 /basics/log/development.log
+/dronetracker/log/development.log
 
 # Ignore uploaded files in development
 /storage/*
@@ -31,16 +37,24 @@ PS1/tmp/*
 basics/storage/*
 !/storage/.keep
 
+/dronetracker/storage/*
+dronetracker/storage/*
+
 /node_modules
 /yarn-error.log
 /basics/node_modules
 /basics/yarn-error.log
+/dronetracker/node_modules
+/dronetracker/yarn-error.log
 
 /public/assets
 .byebug_history
 /basics/public/assets
 /basics/.byebug_history
+/dronetracker/public/assets
+/dronetracker/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /basics/config/master.key
+/dronetracker/config/master.key

@@ -1,0 +1,9 @@
+FROM ruby:2.5.1
+RUN groupadd jenkins
+RUN user-add -r -u 1001 -g jenkins jenkins
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev \
+		postgresql sudo curl
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -y nodejs
+RUN usermod -a -G sudo jenkins
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+USER jenkins

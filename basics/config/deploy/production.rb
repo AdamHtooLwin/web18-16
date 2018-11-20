@@ -8,7 +8,11 @@
 # server "db.example.com", user: "deploy", roles: %w{db}
 
 set :deploy_to, "/home/deploy/web18-16-app"
-set :default_env, {'HTTP_PROXY'=>'192.41.170.23:3128','HTTPS_PROXY'=>'192.41.170.23:3128'}
+set :default_env, {
+    'HTTP_PROXY'=>'192.41.170.23:3128',
+    'HTTPS_PROXY'=>'192.41.170.23:3128',
+    'BAZOOKA_USER' => ENV['BAZOOKA_USER'],
+}
 
 # server "192.40.171.127", user: "deploy", roles: %w{app db web}
 server "web16", user: "deploy", roles: %w{app db web}

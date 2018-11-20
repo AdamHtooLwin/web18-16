@@ -5,7 +5,7 @@ set :application, "web18-16"
 set :repo_url, "git@ait-vision.org:web18-16"
 set :rbenv_type, :user
 set :rbenv_ruby, '2.5.1'
-set :repo_tree, 'web18-16-app'
+set :repo_tree, 'basics'
 
 append :linked_files, "config/database.yml", "config/master.key"
 append :linked_dirs, "log", "tmp", "public/system", ".bundle"
